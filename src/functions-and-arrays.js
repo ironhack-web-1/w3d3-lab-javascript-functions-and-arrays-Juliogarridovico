@@ -1,3 +1,5 @@
+// Lo siento por los bonus, pero no tengo tiempo para hacerlos :(
+
 // Iteration #1: Find the maximum
 function maxOfTwoNumbers(numeroOne, numeroXu) {
   if (numeroOne > numeroXu) {
@@ -114,7 +116,12 @@ const wordsUnique = [
   "bring",
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(items) {
+  if (!items.length) {
+    return null;
+  }
+  return items.filter((word, pos) => items.indexOf(word) != pos);
+}
 
 // Iteration #6: Find elements
 const wordsFind = [
@@ -128,7 +135,13 @@ const wordsFind = [
   "disobedience",
 ];
 
-function doesWordExist() {}
+function doesWordExist(datos, palabraBuscar) {
+  if (datos.length === 0) {
+    return null;
+  }
+
+  return datos.includes(palabraBuscar);
+}
 
 // Iteration #7: Count repetition
 const wordsCount = [
@@ -145,7 +158,21 @@ const wordsCount = [
   "matter",
 ];
 
-function howManyTimes() {}
+function howManyTimes(Palabras, queBuscas) {
+  if (Palabras.length === 0) {
+    return 0;
+  }
+  // me molaria mazo abreviar mas ese codigo
+  let repeticion = 0;
+
+  Palabras.map((Palabra) => {
+    if (Palabra === queBuscas) {
+      repeticion++;
+    }
+  });
+
+  return repeticion;
+}
 
 // Iteration #8: Bonus
 const matrix = [
